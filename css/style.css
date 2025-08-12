@@ -219,10 +219,15 @@ ul.features li .li-text {
   box-sizing: border-box;
   left: 30px;
   right: auto;
+  pacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .info-container:hover .info-popup {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  display: block; 
 }
 
 .pricing-cards .card:nth-child(4) .info-popup {
@@ -285,3 +290,4 @@ ul.features li .li-text {
 }
 
 /* Developed By: Md. Mahabubur */
+
