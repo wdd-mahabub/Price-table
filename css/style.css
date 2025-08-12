@@ -1,0 +1,286 @@
+/* Developed By: Md. Mahabubur */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f6f7fb;
+  padding: 20px;
+}
+
+.pricing-section {
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.pricing-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #1d1d1f;
+}
+
+.pricing-section p {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 24px;
+  flex: 1 1 320px;
+  max-width: 380px;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 1px solid #00aa5b;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  z-index: 10;
+}
+
+.card.highlight {
+  border-color: #00aa5b;
+}
+
+.card h3 {
+  font-size: 1.3em;
+  color: #000;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 5px 10px;
+  border-radius: 20px;
+  background: #d9f2e4;
+  color: #00aa5b;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #1d1d1f;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+  font-size: 1em;
+}
+
+.description {
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 11px;
+  text-align: left;
+}
+
+.btn {
+  background: #0f8566;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0f9370;
+  color: #fff;
+}
+
+ul.features {
+  list-style: none;
+  text-align: left;
+  margin-top: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 0 !important;
+}
+
+ul.features li {
+  margin-bottom: 10px;
+  position: relative;
+  min-height: 24px;
+  border-bottom: 1px solid #f5f6fb;
+  padding-bottom: 10px;
+
+  display: flex;
+  align-items: flex-start;
+  padding-left: 32px;
+  padding-right: 0;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+ul.features li:last-child {
+  border-bottom: none;
+}
+
+ul.features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 18px;
+  height: 18px;
+  background: url('../img/check.png') no-repeat center center;
+  background-size: contain;
+}
+
+ul.features li.cross::before {
+  background: url('../img/cross.png') no-repeat center center;
+  background-size: contain;
+}
+
+
+ul.features li .li-text {
+  flex-grow: 1;
+  padding-right: 10px;
+}
+
+.info-container {
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.info-icon {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+  position: relative;
+}
+
+.info-icon:hover {
+  background-color: #0f8566;
+  color: #fff;
+}
+
+.info-popup {
+  display: none;
+  position: absolute;
+  top: -10px;
+  width: 320px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  text-align: left;
+  font-size: 14px;
+  white-space: normal;
+  box-sizing: border-box;
+  left: 30px;
+  right: auto;
+}
+
+.info-container:hover .info-popup {
+  display: block;
+}
+
+.pricing-cards .card:nth-child(4) .info-popup {
+  left: auto;
+  right: 30px;
+}
+
+.info-popup strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bottom-box {
+  display: block; 
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 16px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+  color: #333;
+  text-decoration: none; 
+  transition: all 0.3s ease;
+}
+
+.bottom-box:hover {
+  background-color: #0f8566;
+  color: white;
+  cursor: pointer;
+}
+
+.tooltip-inner {
+  text-align: left !important;
+}
+
+@media (max-width: 992px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .card {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 16px;
+  }
+
+  ul.features li {
+    padding-left: 32px;
+    padding-right: 0;
+  }
+
+  .info-popup {
+    left: 30px;
+    right: auto;
+  }
+}
+
+/* Developed By: Md. Mahabubur */
